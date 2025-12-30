@@ -19,14 +19,14 @@ fun StatelessCounter(
     modifier: Modifier = Modifier
 ) {
     Column(
-        modifier = Modifier.padding(16.dp)
+        modifier = modifier.padding(16.dp)
     ) {
         if (count > 0) {
             Text(text = "You've had $count glasses.")
         }
 
         Button(
-            onClick = { onIncrement },
+            onClick = onIncrement,
             modifier = Modifier.padding(top = 8.dp),
             enabled = count < 10
         ) {
